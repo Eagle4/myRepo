@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <form method="POST" accept-charset="utf-8">
+        <label for="film">Le nom du film ou de la série</label>
+        <input type="text" name="filmTitle" value="" placeholder="Mettre le nom du film ici">
+        <input type="submit" name="submit" value="Envoyer">
+    </form>
+</head>
+<body>
+
+
+<?php
+/*
+require_once "allo.php";
+$helper  = new AlloHelper;
+$code    = 27061;
+$profile = 'small';
+if (isset($_POST['submit'])) {
+    try {
+        // Envoi de la requête
+        $film         = $_POST['film'];
+        $arrayMovie   = $helper->search($film)->getArray();
+$nombreResult = $arrayMovie['count'];
+echo "$nombreResult résultats de films pour $film<br>";
+foreach ($arrayMovie['movie'] as $key) {
+if (isset($key['title']))
+echo $key['title'] . "<br>";
+else
+echo $key['originalTitle'] . "<br>";
+}
+
+
+$nombreResultSerie = $arrayMovie['results'][4]['$'];
+echo "<br> $nombreResultSerie résultats pour les séries <br>";
+
+foreach ($arrayMovie['tvseries'] as $key) {
+if (isset($key['title']))
+echo $key['title'] . "<br>";
+else
+echo $key['originalTitle'] . "<br>";
+}
+
+
+}
+catch (ErrorException $error) {
+// En cas d'erreur
+echo "Erreur n°", $error->getCode(), ": ", $error->getMessage(), PHP_EOL;
+}
+}
+*/
+?>
+
+</body>
+</html>
