@@ -85,7 +85,7 @@ class Film extends \Dao{
         $query = 'UPDATE movieepsi.films SET auteur=? WHERE id=? ';
         $prep = $this->$instance->prepare($query);
         $prep->bindValue(1, $author, \Dao::PARAM_STR);
-        $prep->bindValue(2, $this->$id, \Dao::PARAM_INT);
+        $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
         $prep->execute();
         return $prep->rowCount(); // retourne le nombre d'elements modifié par la requete
 
@@ -93,11 +93,21 @@ class Film extends \Dao{
 
     public function getAuthor(){
         $query ='SELECT auteur from movieepsi.films where id=?';
-        $prep = $this->$instance->prepare($query);
+        $prep = $this->instance->prepare($query);
         $prep->bindValue(1, $this->$id, \Dao::PARAM_INT);
         $prep->execute();
         return $prep->rowCount();
     }
+
+    public function setDate($date){
+        $query = 'UPDATE movieepsi.films SET dateSortie=? WHERE id=? ';
+        $prep = $this->instance->prepare($query);
+        $prep->bindValue(1, $date, \Dao::PARAM_STR);
+        $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
+        $prep->execute();
+        return $prep->rowCount();
+    }
+
 
     public function getFullInfoOfBdd($id){
         $query ='SELECT * from movieepsi.films where id=?';
@@ -105,7 +115,7 @@ class Film extends \Dao{
         $prep->bindValue(1, $id, \Dao::PARAM_INT);
         $prep->execute();
         $result = $prep->fetch(\Dao::FETCH_BOTH); //tab a nom de col sql ou a index
-        print_r($result);
+        //print_r($result);
         return $result;
     }
 

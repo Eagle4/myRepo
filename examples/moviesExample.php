@@ -30,7 +30,7 @@
             echo '<li><a id="movieInfo"><h3>Full Movie Info</h3></a>';
 
             $movie = $tmdb->getMovie(11);
-            echo 'Now the <b>$movie</b> var got all the data, check the <a href="http://code.octal.es/php/tmdb-api/class-Movie.html">documentation</a> for the complete list of methods.<br><br>';
+            //echo 'Now the <b>$movie</b> var got all the data, check the <a href="http://code.octal.es/php/tmdb-api/class-Movie.html">documentation</a> for the complete list of methods.<br><br>';
 
             echo '<b>'. $movie->getTitle() .'</b><ul>';
             echo '  <li>ID:'. $movie->getID() .'</li>';

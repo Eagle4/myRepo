@@ -106,7 +106,13 @@ class Movie{
 	 */
 	public function getTrailer() {
         $trailers =& $this->getTrailers();
-		return $trailers ['youtube'][0]['source'];
+        if(sizeof($trailers['youtube'])==0){
+            return 'non disponible';
+
+        }else{
+            return $trailers ['youtube'][0]['source'];
+        }
+
 	}
 
 	/**

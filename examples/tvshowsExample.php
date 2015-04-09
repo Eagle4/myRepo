@@ -9,7 +9,7 @@
         <?php
             include("../tmdb-api.php");
 
-            $apikey = "Your API Key";
+            $apikey = "470fd2ec8853e25d2f8d86f685d2270e";
             $tmdb = new TMDB($apikey, 'en', true);
 
             echo '<h2>API Usage for TVShow examples</h2>';
