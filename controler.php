@@ -22,11 +22,15 @@ if (isset($_POST['filmTitle'])) {
     //echo($prep->rowCount());
 
     if($countRet != 0){ // si film déja en bdd
+        echo("le film ". $_POST['filmTitle']." est déja en base, il y a $countRet occurence ");
         //afficher info du film
-        for($i = 0; $i <= $countRet-1; $i++){
+        for($i = 0; $i < $countRet; $i++){
             //echo($result[0]['id']);
             $objfilm  = new \Film\Film('get',$result[$i]['id']);
-            //echo("titre film de l'objet en cours".$objfilm->getTitle());
+
+            echo("<br> titre du film : ".$objfilm->getTitle());
+            echo("<br> date de sortie du film : ".$objfilm->getDate());
+
         }
 
 
@@ -52,7 +56,7 @@ if (isset($_POST['filmTitle'])) {
             //echo'  <li>Résumé:'. $movie->get('overview') .'</li>';
             echo '</ul>...';
             echo '<img src="'. $tmdb->getImageURL('w185') . $movie->getPoster() .'"/></li>';
-            echo '<li><button type="submit" name="addMovie">Ajouter ce film à ma bibliothèque</button></li>';
+            echo '<br><button type="submit" name="addMovie">Ajouter ce film à ma bibliothèque</button>';
             $objfilm  = new \Film\Film('set');
             $objfilm->setTitle($movie->getTitle());
             $objfilm->setDate($movie->get('release_date'));

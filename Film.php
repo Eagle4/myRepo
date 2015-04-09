@@ -15,6 +15,8 @@ class Film extends \Dao{
 
     private $instance = null;
     private $id = null;
+    private $titre = NULL;
+    private $releaseDate = NULL;
 /*
     public function __construct($mode) {
         if($mode == 'set'){
@@ -73,11 +75,13 @@ class Film extends \Dao{
     }
 
     public function getTitle(){
-        $query ='SELECT titre from movieepsi.films where id=?';
+       /* $query ='SELECT titre from movieepsi.films where id=?';
         $prep = $this->instance->prepare($query);
         $prep->bindValue(1, $this->id, \Dao::PARAM_INT);
         $prep->execute();
         return $prep->rowCount();
+       */
+        return $this->titre;
     }
 
     public function setAuthor($author){
@@ -108,14 +112,22 @@ class Film extends \Dao{
         return $prep->rowCount();
     }
 
+    public function getDate(){
+        return $this->releaseDate;
+    }
+
 
     public function getFullInfoOfBdd($id){
+        $this->id = $id;
         $query ='SELECT * from movieepsi.films where id=?';
         $prep = $this->instance->prepare($query);
         $prep->bindValue(1, $id, \Dao::PARAM_INT);
         $prep->execute();
         $result = $prep->fetch(\Dao::FETCH_BOTH); //tab a nom de col sql ou a index
-        //print_r($result);
+        //echo("---------------#".$result['titre']."#---------------");
+        $this->titre = $result['titre'];
+        $this->releaseDate = $result['dateSortie'];
+
         return $result;
     }
 

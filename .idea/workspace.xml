@@ -28,24 +28,14 @@
       <file leaf-file-name="controler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.7272725" vertical-offset="199" max-vertical-offset="1224">
-              <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+            <state vertical-scroll-proportion="-9.581819" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
-                <marker date="1428589874222" expanded="true" signature="282:325" placeholder="select * fro..films..." />
-                <marker date="1428589874222" expanded="true" signature="282:325" placeholder="select * fro..films..." />
-                <marker date="1428589874222" expanded="true" signature="295:325" placeholder="INSERT INTO ..." />
+                <marker date="1428597407355" expanded="true" signature="282:325" placeholder="select * fro..films..." />
+                <marker date="1428597407355" expanded="true" signature="282:325" placeholder="select * fro..films..." />
+                <marker date="1428597407355" expanded="true" signature="295:325" placeholder="INSERT INTO ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personsExample.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/personsExample.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1564">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -62,11 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tvshowsExample.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/tvshowsExample.php">
+      <file leaf-file-name="Person.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/Person.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769231" vertical-offset="576" max-vertical-offset="1445">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="102" max-vertical-offset="2499">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/Role.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="21.115385" vertical-offset="549" max-vertical-offset="1020">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,6 +77,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="323">
               <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Season.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/Season.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="221" max-vertical-offset="2686">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -95,18 +105,8 @@
       <file leaf-file-name="Dao.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.730769" vertical-offset="269" max-vertical-offset="714">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="714">
               <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tmdb-api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tmdb-api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8545456" vertical-offset="545" max-vertical-offset="8585">
-              <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -115,28 +115,18 @@
       <file leaf-file-name="Film.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Film.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6805556" vertical-offset="1508" max-vertical-offset="2312">
-              <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.5509259" vertical-offset="0" max-vertical-offset="2516">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
-                <marker date="1428591112260" expanded="true" signature="1028:1155" placeholder="INSERT INTO ..." />
-                <marker date="1428591112260" expanded="true" signature="1692:1737" placeholder="UPDATE movie..." />
-                <marker date="1428591112260" expanded="true" signature="2074:2118" placeholder="SELECT titre..films..." />
-                <marker date="1428591112260" expanded="true" signature="2354:2400" placeholder="UPDATE movie..." />
-                <marker date="1428591112260" expanded="true" signature="2741:2786" placeholder="SELECT auteu..films..." />
-                <marker date="1428591112260" expanded="true" signature="3018:3068" placeholder="UPDATE movie..." />
-                <marker date="1428591112260" expanded="true" signature="3360:3400" placeholder="SELECT * fro..films..." />
+                <marker date="1428596997841" expanded="true" signature="1088:1215" placeholder="INSERT INTO ..." />
+                <marker date="1428596997841" expanded="true" signature="1752:1797" placeholder="UPDATE movie..." />
+                <marker date="1428596997841" expanded="true" signature="2136:2180" placeholder="SELECT titre..films..." />
+                <marker date="1428596997841" expanded="true" signature="2455:2501" placeholder="UPDATE movie..." />
+                <marker date="1428596997841" expanded="true" signature="2842:2887" placeholder="SELECT auteu..films..." />
+                <marker date="1428596997841" expanded="true" signature="3119:3169" placeholder="UPDATE movie..." />
+                <marker date="1428596997841" expanded="true" signature="3559:3599" placeholder="SELECT * fro..films..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="moviesExample.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/moviesExample.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="170" max-vertical-offset="1683">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="55" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,8 +147,8 @@
         <option value="$PROJECT_DIR$/data/Movie.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/examples/tvshowsExample.php" />
-        <option value="$PROJECT_DIR$/controler.php" />
         <option value="$PROJECT_DIR$/Film.php" />
+        <option value="$PROJECT_DIR$/controler.php" />
       </list>
     </option>
   </component>
@@ -731,33 +721,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Season.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="2686">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.115385" vertical-offset="575" max-vertical-offset="1020">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -767,14 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Person.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="2499">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -805,6 +763,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/moviesExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="170" max-vertical-offset="1683">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/personsExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/Movie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.181818" vertical-offset="1398" max-vertical-offset="3196">
@@ -813,18 +787,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dao.php">
+    <entry file="file://$PROJECT_DIR$/data/Person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.730769" vertical-offset="269" max-vertical-offset="714">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="102" max-vertical-offset="2499">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/data/Role.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="323">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state vertical-scroll-proportion="21.115385" vertical-offset="549" max-vertical-offset="1020">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Season.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="221" max-vertical-offset="2686">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -839,48 +821,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/moviesExample.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="170" max-vertical-offset="1683">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="55" />
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="323">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.7272725" vertical-offset="199" max-vertical-offset="1224">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        <state vertical-scroll-proportion="-9.581819" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1428589874222" expanded="true" signature="282:325" placeholder="select * fro..films..." />
-            <marker date="1428589874222" expanded="true" signature="282:325" placeholder="select * fro..films..." />
-            <marker date="1428589874222" expanded="true" signature="295:325" placeholder="INSERT INTO ..." />
+            <marker date="1428597407355" expanded="true" signature="282:325" placeholder="select * fro..films..." />
+            <marker date="1428597407355" expanded="true" signature="282:325" placeholder="select * fro..films..." />
+            <marker date="1428597407355" expanded="true" signature="295:325" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/personsExample.php">
+    <entry file="file://$PROJECT_DIR$/Dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="714">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Film.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6805556" vertical-offset="1508" max-vertical-offset="2312">
-          <caret line="106" column="25" selection-start-line="106" selection-start-column="25" selection-end-line="106" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.5509259" vertical-offset="0" max-vertical-offset="2516">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1428591112260" expanded="true" signature="1028:1155" placeholder="INSERT INTO ..." />
-            <marker date="1428591112260" expanded="true" signature="1692:1737" placeholder="UPDATE movie..." />
-            <marker date="1428591112260" expanded="true" signature="2074:2118" placeholder="SELECT titre..films..." />
-            <marker date="1428591112260" expanded="true" signature="2354:2400" placeholder="UPDATE movie..." />
-            <marker date="1428591112260" expanded="true" signature="2741:2786" placeholder="SELECT auteu..films..." />
-            <marker date="1428591112260" expanded="true" signature="3018:3068" placeholder="UPDATE movie..." />
-            <marker date="1428591112260" expanded="true" signature="3360:3400" placeholder="SELECT * fro..films..." />
+            <marker date="1428596997841" expanded="true" signature="1088:1215" placeholder="INSERT INTO ..." />
+            <marker date="1428596997841" expanded="true" signature="1752:1797" placeholder="UPDATE movie..." />
+            <marker date="1428596997841" expanded="true" signature="2136:2180" placeholder="SELECT titre..films..." />
+            <marker date="1428596997841" expanded="true" signature="2455:2501" placeholder="UPDATE movie..." />
+            <marker date="1428596997841" expanded="true" signature="2842:2887" placeholder="SELECT auteu..films..." />
+            <marker date="1428596997841" expanded="true" signature="3119:3169" placeholder="UPDATE movie..." />
+            <marker date="1428596997841" expanded="true" signature="3559:3599" placeholder="SELECT * fro..films..." />
           </folding>
         </state>
       </provider>
