@@ -304,7 +304,7 @@ class TMDB{
 		$url = self::_API_URL_.$action .'?api_key='. $this->getApikey() .'&language='. $this->getLang() .'&'.$appendToResponse;
 
 		if ($this->_debug) {
-			echo '<pre><a href="' . $url . '">check request</a></pre>';
+			//echo '<pre><a href="' . $url . '">check request</a></pre>';
 		}
 
 		$ch = curl_init();
