@@ -62,6 +62,9 @@ class Film extends \Dao{
         }
     }
 
+    public function  getId(){
+        return $this->id;
+    }
 
     public function setTitle($title){
 

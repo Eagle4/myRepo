@@ -8,8 +8,17 @@
 
 require('Film.php');
 
+if(isset($_POST['addMovie'])){
+   $data = explode('|',$_POST['addMovie']);
+    $objfilm  = new \Film\Film('set');
+    $objfilm->setTitle($data[1]);
+    $objfilm->setDate($data[2]);
+    $objFilmBdd[0] = new \Film\Film('get',$objfilm->getId());
+    include('ui\localView.php');
+}
 
 if (isset($_POST['filmTitle'])) {
+    //echo($_POST['typeOfSearch']);
     echo ('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
     $instance = \Dao::getInstance();
     $query = 'select * from movieepsi.films where titre=?';
@@ -20,19 +29,13 @@ if (isset($_POST['filmTitle'])) {
     //print_r($result);
     $countRet = $prep->rowCount();
     //echo($prep->rowCount());
-
     if($countRet != 0){ // si film déja en bdd
-        echo("le film ". $_POST['filmTitle']." est déja en base, il y a $countRet occurence ");
         //afficher info du film
         for($i = 0; $i < $countRet; $i++){
-            //echo($result[0]['id']);
             $objfilm  = new \Film\Film('get',$result[$i]['id']);
-
-            echo("<br> titre du film : ".$objfilm->getTitle());
-            echo("<br> date de sortie du film : ".$objfilm->getDate());
-
+            $objFilmBdd[$i] = $objfilm;
         }
-
+        include('ui\localView.php');
 
     }else{ // si film pas en bdd
         //recherche par webservice
@@ -40,6 +43,39 @@ if (isset($_POST['filmTitle'])) {
         $apikey = "470fd2ec8853e25d2f8d86f685d2270e";
         $tmdb = new TMDB($apikey, 'fr', true);
 
+        switch($_POST['typeOfSearch'])
+        {
+
+            case 1:
+                $movies =  $tmdb->searchMovie($_POST['filmTitle']);
+                $i = 0;
+                foreach($movies as $movie) {
+                    $movie = $tmdb->getMovie($movie->getID());
+                    $objFilmWs[$i] = $movie;
+                    $i++;
+                }
+                include('ui\wsFilmView.php');
+                break;
+
+
+            case 2:
+                $series = $tmdb->searchTVShow($_POST['filmTitle']);
+                $i = 0;
+                foreach($series as $serie){
+                    $serie = $tmdb->getTVShow($serie->getID());
+                    $objSeriesWs[$i] = $serie;
+                    $i++;
+                }
+                include('ui\wsSeriesView.php');
+                break;
+
+            default:
+                break;
+        }
+
+
+
+/*
         echo '<li><a id="movieInfo"><h3>Full Movie Info</h3></a>';
 
         $movies =  $tmdb->searchMovie($_POST['filmTitle']);
@@ -62,7 +98,7 @@ if (isset($_POST['filmTitle'])) {
             $objfilm->setDate($movie->get('release_date'));
         }
 
-
+*/
 
 
     }
