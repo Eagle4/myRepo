@@ -8,17 +8,39 @@
 
 require('Film.php');
 
+if(isset($_POST['seeMoviesLibrary'])){
+    $instance = \Dao::getInstance();
+    $query = 'select id from movieepsi.films';
+    $prep = $instance->prepare($query);
+    $prep->execute();
+    $result = $prep->fetchAll(\Dao::FETCH_BOTH);
+    for($i = 0; $i < sizeof($result); $i++) {
+        $objFilmBdd[$i] = new \Film\Film('get',$result[$i][0]);
+    }
+    include('ui\localView.php');
+}
+
 if(isset($_POST['addMovie'])){
-   $data = explode('|',$_POST['addMovie']);
+    $data = explode('|',$_POST['addMovie']);
+    print_r($data);
     $objfilm  = new \Film\Film('set');
-    $objfilm->setTitle($data[1]);
-    $objfilm->setDate($data[2]);
+    if($data[3] == 'film'){
+        $objfilm->setTitle($data[1]);
+        $objfilm->setImgUrl($data[2]);
+        $objfilm->setResume($data[4]);
+        $objfilm->setDate($data[5]);
+    }else if($data[3] == 'serie'){
+        $objfilm->setTitle($data[1]);
+        $objfilm->setImgUrl($data[2]);
+        $objfilm->setSerie(true);
+        $objfilm->setResume($data[4]);
+        $objfilm->setNbSaisons($data[5]);
+    }
     $objFilmBdd[0] = new \Film\Film('get',$objfilm->getId());
     include('ui\localView.php');
 }
 
 if (isset($_POST['filmTitle'])) {
-    //echo($_POST['typeOfSearch']);
     echo ('<meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
     $instance = \Dao::getInstance();
     $query = 'select * from movieepsi.films where titre=?';

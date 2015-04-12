@@ -17,20 +17,10 @@ class Film extends \Dao{
     private $id = null;
     private $titre = NULL;
     private $releaseDate = NULL;
-/*
-    public function __construct($mode) {
-        if($mode == 'set'){
-            $this->instance = \Dao::getInstance();
-            $query = 'INSERT INTO movieepsi.films (id, titre, auteur, dateSortie) VALUES (NULL, \'titleNotYetDefined\', \'autorNotYetDefined\', 0000);';
-            $this->instance->exec($query);
-            $this->id = $this->instance->lastInsertId();
-            //echo($this->instance->lastInsertId());
-        }elseif($mode == 'get'){
-
-        }
-
-    }
-*/
+    private $imgUrl = NULL;
+    private $resume = NULL;
+    private $serie = NULL;
+    private $nbSaisons = NULL;
 
     public function __construct()
     {
@@ -42,7 +32,7 @@ class Film extends \Dao{
             //insérer un nouveau film en bdd
             case 1:
                 if($arg[0] == 'set'){
-                    $query = 'INSERT INTO movieepsi.films (id, titre, auteur, dateSortie) VALUES (NULL, \'titleNotYetDefined\', \'autorNotYetDefined\', 0000);';
+                    $query = 'INSERT INTO movieepsi.films (id) VALUES (NULL);';
                     $this->instance->exec($query);
                     $this->id = $this->instance->lastInsertId();
                     //echo($this->instance->lastInsertId());
@@ -54,7 +44,6 @@ class Film extends \Dao{
                 if($arg[0]=='get'){
                     $this->getFullInfoOfBdd($arg[1]);
                 }
-
             break;
 
             default:
@@ -78,12 +67,6 @@ class Film extends \Dao{
     }
 
     public function getTitle(){
-       /* $query ='SELECT titre from movieepsi.films where id=?';
-        $prep = $this->instance->prepare($query);
-        $prep->bindValue(1, $this->id, \Dao::PARAM_INT);
-        $prep->execute();
-        return $prep->rowCount();
-       */
         return $this->titre;
     }
 
@@ -119,6 +102,65 @@ class Film extends \Dao{
         return $this->releaseDate;
     }
 
+    public function setImgUrl($url){
+
+        $query = 'UPDATE movieepsi.films SET urlImg=? WHERE id=?';
+        $prep = $this->instance->prepare($query);
+        $prep->bindValue(1, $url, \Dao::PARAM_STR);
+        $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
+        $prep->execute();
+        return $prep->rowCount(); // retourne le nombre d'elements modifié par la requete
+    }
+
+    public function getImgUrl(){
+        return $this->imgUrl;
+    }
+
+    public function isSerie(){
+        return $this->serie;
+    }
+
+    public function setSerie($serie){
+        if($serie== true or $serie==false or $serie== 'true' or $serie=='false'){
+            $query = 'UPDATE movieepsi.films SET serie=? WHERE id=?';
+            $prep = $this->instance->prepare($query);
+            $prep->bindValue(1, $serie, \Dao::PARAM_BOOL);
+            $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
+            $prep->execute();
+            return $prep->rowCount(); // retourne le nombre d'elements modifié par la requete
+        }else{
+            return -1;
+        }
+
+    }
+
+    public function getResume(){
+        return $this->resume;
+    }
+
+    public function setResume($resume){
+        $query = 'UPDATE movieepsi.films SET resume=? WHERE id=? ';
+        $prep = $this->instance->prepare($query);
+        $prep->bindValue(1, $resume, \Dao::PARAM_STR);
+        $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
+        $prep->execute();
+        return $prep->rowCount();
+    }
+
+
+    public function setnbSaisons($nbSaisons){
+        $query = 'UPDATE movieepsi.films SET nbSaisons=? WHERE id=? ';
+        $prep = $this->instance->prepare($query);
+        $prep->bindValue(1, $nbSaisons, \Dao::PARAM_STR);
+        $prep->bindValue(2, $this->id, \Dao::PARAM_INT);
+        $prep->execute();
+        return $prep->rowCount();
+    }
+
+    public function getnbSaisons(){
+
+        return $this->nbSaisons;
+    }
 
     public function getFullInfoOfBdd($id){
         $this->id = $id;
@@ -127,9 +169,9 @@ class Film extends \Dao{
         $prep->bindValue(1, $id, \Dao::PARAM_INT);
         $prep->execute();
         $result = $prep->fetch(\Dao::FETCH_BOTH); //tab a nom de col sql ou a index
-        //echo("---------------#".$result['titre']."#---------------");
         $this->titre = $result['titre'];
         $this->releaseDate = $result['dateSortie'];
+        $this->imgUrl = $result['urlImg'];
 
         return $result;
     }
@@ -139,6 +181,8 @@ class Film extends \Dao{
         $this->setTitle($result['titre']);
         return $result;
     }
+
+
 
 
 
